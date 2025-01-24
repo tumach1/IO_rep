@@ -165,14 +165,6 @@ class OrderRepository extends \Repository{
         $stmt->execute();
         $zamowienie = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-        $stmt = $this->database->prepare('
-            Insert into test(error)
-            VALUES(:status_id)
-        ');
-        $stmt->bindParam(':status_id', $zamowienie[0]['id']);
-        $stmt->execute();
-        
-
         for($i = 0; $i < count($zamowienie); $i++){
             $stmt = $this->database->prepare("
                 SELECT zk.zamowienie_id as order_id,

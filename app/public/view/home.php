@@ -47,8 +47,7 @@
             <span class="top-cart-count" id="counter">0</span>
           </div>
               <div class="top-user-info-icon"></div>
-              <a href="./dashboard">
-                  <div class="top-user-info-text">
+              
                       <?php
                       require_once __DIR__ . '/../../src/repository/ReaderRepository.php';
                       require_once __DIR__ . '/../../src/repository/WorkerRepository.php';
@@ -56,19 +55,18 @@
                       {
                           $readerRepository = new ReaderRepository();
                           $currentUser = $readerRepository->getById($_SESSION['Reader']);
-                          echo $currentUser->getName();
+                          echo '<a href="/logout"><div class="top-user-info-text">'.$currentUser->getName().'</div></a>';
                       } elseif (isset($_SESSION['Worker']))
                       {
                           $workerRepository = new WorkerRepository();
                           $currentUser = $workerRepository->getById($_SESSION['Worker']);
-                          echo $currentUser->getName();
+                          echo '<a href="./dashboard">'.$currentUser->getName().'</a>';
                       } else
                       {
-                          echo "Profile";
+                          echo '<a href="/login"><div class="top-user-info-text">Login</div></a>';
                       }
                       ?>
-                  </div>
-              </a>
+                
               <!-- <img class="top-user-info-arrow" src="/public/img/arrow-down.svg" /> -->
           </div>
       </div>

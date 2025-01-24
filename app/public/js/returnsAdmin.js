@@ -95,7 +95,7 @@ async function updateOrdersView() {
     const ordersContainer = document.getElementById('orders-list');
     ordersContainer.innerHTML = ''; // Wyczyszczenie listy
 
-    try {
+    // try {
         const response = await fetch('/ordersByStatus?status_id=3');
         if (!response.ok) {
             console.log(response);
@@ -122,7 +122,7 @@ async function updateOrdersView() {
             div_header.appendChild(div_button);
             ordersContainer.appendChild(div_header);
             div_button.addEventListener('click', async () => {
-                const response = await fetch('/order/' + order.id, {
+                const response = await fetch('/order', {
                     method: 'PUT',
                     headers: {
                         'Content-Type': 'application/json',
@@ -171,11 +171,11 @@ async function updateOrdersView() {
             })
         });
 
-    }
-    catch (error) {
-        console.log(error.message);
-        throw new Error('Failed to fetch orders');
-    }
+    // }
+    // catch (error) {
+    //     console.log(error.message);
+    //     throw new Error('Failed to fetch orders');
+    // }
 
 }
 
@@ -185,6 +185,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     const cart = document.getElementById('cart');
     cart.classList.remove('active');
     updateCartView();
+    if (!localStorage.getItem('cart')) {
+        localStorage.setItem('cart', JSON.stringify([]));
+    }
     document.getElementById("counter").textContent = JSON.parse(localStorage.getItem('cart')).length;
 
     await updateOrdersView();

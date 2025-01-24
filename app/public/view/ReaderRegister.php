@@ -2,7 +2,7 @@
     <head>
         <meta charset="UTF-8">
         <link rel="icon" type="image/x-icon" href="public/img/favicon.ico">
-        <title>Biblioteka</title>
+        <title>Manga</title>
         <link rel="stylesheet" href = "public/css/register.css" type="text/css">
         <script type="text/javascript" src="./public/js/script.js" defer></script>
     </head>

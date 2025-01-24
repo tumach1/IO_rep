@@ -119,16 +119,17 @@ async function updateOrdersView() {
             div_button.innerHTML = `Return`;
             if(order.statusId === 2) {
             div_header.appendChild(div_button);
-        }
+            }
 
             ordersContainer.appendChild(div_header);
+            console.log(order.id);
             div_button.addEventListener('click', async () => {
-                const response = await fetch('/order/' + order.id, {
+                const response = await fetch('/order', {
                     method: 'PUT',
                     headers: {
                         'Content-Type': 'application/json',
                     },
-                    body: JSON.stringify({orderId: order.id, statusId: 2}),
+                    body: JSON.stringify({orderId: order.id, statusId: 3}),
                 });
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
@@ -185,6 +186,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     const cart = document.getElementById('cart');
     cart.classList.remove('active');
     updateCartView();
+    if (!localStorage.getItem('cart')) {
+        localStorage.setItem('cart', JSON.stringify([]));
+    }
     document.getElementById("counter").textContent = JSON.parse(localStorage.getItem('cart')).length;
 
     await updateOrdersView();

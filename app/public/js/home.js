@@ -879,6 +879,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     updateCartView();
+    if (!localStorage.getItem('cart')) {
+        localStorage.setItem('cart', JSON.stringify([]));
+    }
     document.getElementById("counter").textContent = JSON.parse(localStorage.getItem('cart')).length;
 
     // Dodanie książki do koszyka po kliknięciu przycisku "Book from 20.03"

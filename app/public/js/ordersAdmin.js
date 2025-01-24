@@ -118,17 +118,15 @@ async function updateOrdersView() {
             div_status.classList.add('order-header-status');
             div_status.innerHTML = `status: ordered`;
             div_header.appendChild(div_status);
-            if (order.statusId == 2) {
             const div_button = document.createElement('div');
+        
             div_button.classList.add('received-order-button');
-            div_button.innerHTML = `Return`;
+            div_button.innerHTML = `Sent`;
             div_header.appendChild(div_button);
-            }
-            else if (order.statusId == 3) {
 
             ordersContainer.appendChild(div_header);
             div_button.addEventListener('click', async () => {
-                const response = await fetch('/order/' + order.id, {
+                const response = await fetch('/order', {
                     method: 'PUT',
                     headers: {
                         'Content-Type': 'application/json',
@@ -175,7 +173,7 @@ async function updateOrdersView() {
                 ordersContainer.appendChild(div);
             
             })
-        });
+        })
 
     }
     catch (error) {
@@ -191,6 +189,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     const cart = document.getElementById('cart');
     cart.classList.remove('active');
     updateCartView();
+    if (!localStorage.getItem('cart')) {
+        localStorage.setItem('cart', JSON.stringify([]));
+    }
     document.getElementById("counter").textContent = JSON.parse(localStorage.getItem('cart')).length;
 
     await updateOrdersView();

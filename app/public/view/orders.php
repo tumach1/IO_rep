@@ -50,7 +50,7 @@
                         <span class="top-cart-count" id="counter">0</span>
                     </div>
                     <div class="top-user-info-icon"></div>
-                    <a href="./dashboard">
+                    <a href="/logout">
                         <div class="top-user-info-text">
                             <?php
                                 
