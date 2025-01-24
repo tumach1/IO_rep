@@ -1,0 +1,56 @@
+version: '3'
+services:
+  web:
+    build:
+      context: .
+      dockerfile: docker/nginx/Dockerfile
+    ports:
+      - "1050:80"
+      - "443:443"
+    volumes:
+      - .:/app/
+    links:
+      - php
+    networks:
+      - nginx
+
+  mailhog:
+    image: mailhog/mailhog:v1.0.0
+    ports:
+      - "1025:1025"
+      - "8025:8025"
+    networks:
+      - nginx
+    links:
+      - php
+
+  db:
+    image: mariadb:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+      MYSQL_DATABASE: app
+    ports:
+      - "3316:3306"
+    networks:
+      - db-network
+    volumes:
+      - db-data:/var/lib/mysql
+
+  php:
+    build:
+      context: .
+      dockerfile: docker/php/Dockerfile
+    volumes:
+      - .:/app/
+    networks:
+      - db-network
+      - nginx
+
+networks:
+  db-network:
+  nginx:
+
+volumes:
+  db-data:
