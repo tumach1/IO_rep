@@ -1,9 +1,6 @@
 <html lang="pl-PL">
     <head>
         <meta charset="UTF-8">
-        <meta name="description" content="Aplikacja biblioteki">
-        <meta name="keywords" content="książki, wypożyczalnia, biblioteka">
-        <meta name="author" content="Grupa lab 05 biblioteka">
         <link rel="icon" type="image/x-icon" href="public/img/favicon.ico">
         <title>Biblioteka</title>
         <link rel="stylesheet" href = "public/css/register.css" type="text/css">
@@ -12,7 +9,7 @@
     <body>
         <div id="container_pc">
             <div id="banner">
-                <h1><a id="main_page_link" href="/">Biblioteka</a></h1>
+                <h1><a id="main_page_link" href="/">Manga</a></h1>
                 <img src="/public/img/logo.svg" alt="logo">
             </div>
             <div id = "main_content">
