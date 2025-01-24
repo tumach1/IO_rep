@@ -1,0 +1,1243 @@
+
+
+.ipad-pro {
+    top: 0px;
+    position: absolute;
+    background-color: #A9D6E5;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+  
+  @media(max-width:  1200px){
+    .news{
+      display: none;
+    }
+  } 
+  
+  /* @media(max-width:  1180px){
+    .ipad-pro {
+      justify-content: flex-start;
+    }
+  }  */
+  
+  .ipad-pro .div {
+    background-color: #A9D6E5;
+    display: flex;
+    flex-flow: column;
+    /* background-color: #6fe836; */
+    max-width: 1180px;
+    min-width: 780px;
+    flex: 1 0;
+    gap: 30px;
+  }
+  
+  
+  @media(max-width:  1200px){
+    .ipad-pro .div {
+      max-width: 780px;
+      min-width: 780px;
+    }
+  } 
+  
+  
+  
+  
+  
+  .top-panel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1 0;
+    max-width: 1180px;
+    min-height: 70px;
+  
+    border-radius: 0px 0px 7px 7px;
+    background-color: #E2E2E2;
+  
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  .top-orders-text {
+    /* position: absolute; */
+    height: 16px;
+    top: 35px;
+    left: 550px;
+    
+    font-weight: 600;
+    color: #000000;
+    font-size: 15px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .top-library-text {
+    height: 16px;
+    
+    font-weight: 600;
+    color: #000000;
+    font-size: 15px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .top-order-new-book {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    height: 39px;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid;
+    border-color: #6fe836;
+  }
+  
+  .top-order-new-book-text {
+    color: #6fe836;
+    height: 16px;
+    
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .top-user-info {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+    /* position: relative; */
+    top: 26px;
+    right: 0px;
+    /* left: 1089px; */
+  }
+  
+  .top-user-info-icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 17.5px;
+    background-color: #d9d9d9;
+    border: 1px solid;
+    border-color: #000000;
+  }
+  
+  .top-user-info-text {
+    
+    font-weight: 600;
+    color: #000000;
+    font-size: 15px;
+    text-align: right;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  
+  
+  
+  
+  
+  
+  .search-category{
+    display: flex;
+    justify-content: space-between;
+    top: 114px;
+    max-width: 1180px;
+    gap: 20px;
+    background-color: inherit;
+  }
+  
+  .ipad-pro .search-input {
+    display: flex;
+    flex: 4 1;
+    /* max-width: 780px;
+    min-width: 506px; */
+    height: 39px;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 10px;
+    /* position: absolute; */
+    top: 114px;
+    /* left: 49px; */
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid;
+    border-color: #ffffff;
+  }
+  
+  .ipad-pro .search-sign {
+    position: relative;
+    width: 14px;
+    height: 13px;
+    color: #ffffff
+  }
+  
+  .ipad-pro .category-dropdown {
+    /* position: absolute; */
+    display: flex;
+    flex: 2 1;
+    align-items: center;
+    justify-content: space-between;
+    /* max-width: 380px;
+    min-width: 100px; */
+    height: 39px;
+    top: 114px;
+    /* left: 800px; */
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid;
+    border-color: #ffffff;
+    background-color: inherit;
+    /* padding-left: 15px;
+    padding-right: 15px; */
+    cursor: pointer;
+    z-index: 2;
+  }
+  
+  .ipad-pro .filler-text-2 {
+    /* top: 11px;
+    left: 18px; */
+    margin-left: 15px;
+    color: #ffffff;
+    /* position: absolute; */
+    height: 16px;
+    
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 0;
+    line-height: normal;
+    /* white-space: nowrap; */
+    user-select: none;
+  }
+  
+  .ipad-pro .arrow {
+    /* position: absolute; */
+    width: 10px;
+    height: 8px;
+    margin-right: 15px;
+    filter: invert(1);
+    /* top: 16px;
+    left: 352px; */
+  }
+  
+  .category-dropdown-content{
+    position: absolute;
+    display: none;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 380px;
+    top: calc(114px);
+    left: 849px;
+    border-style: solid;
+    border-radius: 16px;
+    border-color: #a0a0a0;
+    border-width: 1px;
+    background-color: #ffffff;
+  
+    padding-top: calc(39px + 10px);
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    /* visibility: hidden; */
+    z-index: 1;
+  }
+  
+  .category-dropdown-content .genre-frame {
+    display: inline-flex;
+    flex-flow: column;
+    justify-content: center;
+    flex-grow: 1;
+    height: 26px;
+    border-radius: 11px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #A9D6E5;
+    cursor: pointer;
+  }
+  
+  .category-dropdown-content .genre-text {
+    
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 17px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    user-select: none;
+    
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  .tabs-news{
+    /* background-color: green; */
+    position: relative;
+    top: 0px;
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    z-index: 0; 
+  }
+  
+  
+  
+  .ipad-pro .book-tabs {
+    width: 780px;
+    height: 462px;
+    /* left: 49px; */
+  }
+  
+  /* .ipad-pro .overlap {
+    height: 35px;
+    top: 0;
+    position: absolute;
+    width: 780px;
+    left: 0;
+  }
+  
+  .ipad-pro .overlap-group {
+    height: 33px;
+    top: 2px;
+    position: absolute;
+    width: 780px;
+    left: 0;
+  } */
+  
+  .ipad-pro .line-2 {
+    position: relative;
+    width: 780px;
+    height: 1px;
+    top: 33px;
+    left: 0;
+    background-color: #a0a0a0;
+  }
+  
+  .ipad-pro .type-selector {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 34px;
+  }
+  
+  .ipad-pro .tab {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 14px;
+    position: relative;
+    flex: 0 0 auto;
+  }
+  
+  .ipad-pro .tab-name {
+    position: relative;
+    width: fit-content;
+    margin-top: -1px;
+    
+    font-weight: 600;
+    color: #fff;
+    font-size: 15px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .ipad-pro .underline {
+    display: flex;
+    flex-direction: column;
+    height: 3px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+  }
+  
+  .ipad-pro .filler {
+    position: relative;
+    flex: 1;
+    align-self: stretch;
+    width: 100%;
+    flex-grow: 1;
+    background-color: #0075ff;
+  }
+  
+  
+  .ipad-pro .image-wrapper {
+    display: flex;
+    height: 266px;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+    position: relative;
+    align-self: stretch;
+  }
+  
+  
+  /* @media(max-width:  1180px){
+    .news{
+      display: none;
+    }
+  } */
+  
+  .ipad-pro .news {
+    position: absolute;
+    width: 380px;
+    height: 462px;
+    /* top: 185px; */
+    /* left: 849px; */
+    left: 800px;
+  }
+  
+  .ipad-pro .line-3 {
+    position: absolute;
+    width: 380px;
+    height: 1px;
+    top: 33px;
+    left: 0;
+    background-color: #a0a0a0;
+  }
+  
+  .ipad-pro .news-text {
+    height: 16px;
+    top: 1px;
+    
+    font-weight: 600;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+    position: absolute;
+    left: 0;
+  }
+  
+  .ipad-pro .news-image {
+    width: 380px;
+    height: 404px;
+    top: 58px;
+    border-radius: 7px;
+    background-image: url(/public/img/event.png);
+    background-size: cover;
+    background-position: 50% 50%;
+    position: absolute;
+    left: 0;
+  }  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  .ipad-pro .book-list-panel {
+    /* position: relative; */
+    display: flex;
+    align-items: stretch;
+    flex-flow: column;
+    max-width: 1180px;
+    top: 676px;
+    /* left: 49px; */
+    background-color: #E2E2E2;
+    border-radius: 7px 7px 7px 7px;
+    overflow: hidden;
+  }
+  
+  .ipad-pro .book-list {
+    display: block;
+    flex-flow: column;
+    gap: 8px;
+    overflow: hidden;
+    align-items: stretch;
+  }
+  
+  
+  
+  .ipad-pro .book-list-title {
+    display: flex;
+    height: 49px;
+    align-items: center;
+    /* justify-content: stretch; */
+    gap: 20px;
+    width: 100%;
+  }
+  
+  .ipad-pro .book-card-horizontal {
+    display: flex;
+    height: 64px;
+    align-items: center;
+    justify-content: stretch;
+    gap: 20px;
+    width: 100%;
+    flex-grow: 1;
+    max-width: 1180px;
+    /* overflow: hidden; */
+  }
+  
+  
+  
+  .bot-scrl-div-name{
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 140px;
+    padding-left: 15px;
+    flex: 1 0;
+  
+    
+  }
+  
+  .bot-scrl-div-author{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 80px;
+    flex: 1 0;
+  }
+  
+  .bot-scrl-div-genre{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100px;
+    flex: 1 0;
+  }
+  
+  .bot-scrl-div-opportunity{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 95px;
+    flex: 1 0;
+  }
+  
+  .bot-scrl-div-status{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100px;
+    flex: 1 0;
+  }
+  
+  .bot-scrl-div-action{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 135px;
+    flex: 1 0;
+  }
+  
+  
+  .book-list-title .bot-scrl-div-name,
+  .book-list-title .bot-scrl-div-author,
+  .book-list-title .bot-scrl-div-genre,
+  .book-list-title .bot-scrl-div-opportunity,
+  .book-list-title .bot-scrl-div-status,
+  .book-list-title .bot-scrl-div-action{
+    justify-content: center;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /* .ipad-pro .book-list-panel {
+    position: absolute;
+    display: inline-flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    width: 1180px;
+    height: 346px;
+    top: 676px;
+    left: 49px;
+    background-color: #ffffff;
+    border-radius: 7px 7px 0px 0px;
+    overflow: hidden;
+  } */  
+  
+  /* .ipad-pro .book-list {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    position: absolute;
+    top: 49px;
+    left: 0;
+    overflow: hidden;
+  } */  
+  
+  
+  .ipad-pro .line {
+    position: absolute;
+    align-self: stretch;
+    max-width: 1180px;
+    width: 100%;
+    height: 1px;
+    background-color: #a0a0a0;
+  }  
+  
+  @media (max-width: 1200px) {
+    .ipad-pro .line {
+      position: absolute;
+      align-self: stretch;
+      max-width: 780px;
+    }  
+  }
+  
+  .ipad-pro .line-end {
+    align-self: stretch;
+    width: 100%;
+    height: 1px;
+    background-color: #a0a0a000;
+  }  
+  
+  .ipad-pro .name {
+    display: flex;
+    width: 200px;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+    padding: 0px 0px 0px 15px;
+    position: relative;
+    align-self: stretch;
+  }  
+  
+  .ipad-pro .image {
+    width: 32px;
+    height: 44px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border-radius: 6px;
+    overflow: hidden;
+  }  
+  
+  .ipad-pro .img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+  }  
+  
+  .bot-scrl-name {
+    
+    font-weight: 600;
+    color: #000000;
+    font-size: 15px;
+    letter-spacing: 0;
+    line-height: normal;
+  
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }  
+  
+  
+  
+  .ipad-pro .text-wrapper {
+    
+    font-weight: 600;
+    color: #000000;
+    font-size: 15px;
+    letter-spacing: 0;
+    line-height: normal;
+    text-align: center;
+  }  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  .ipad-pro .text-wrapper-3 {
+    
+    font-weight: 600;
+    color: #a0a0a0;
+    font-size: 15px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  
+  
+  /* .ipad-pro .div-wrapper {
+    display: flex;
+    width: 180px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    align-self: stretch;
+  }
+  
+  .ipad-pro .div-wrapper-2 {
+    display: flex;
+    flex-direction: column;
+    width: 180px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    align-self: stretch;
+  }
+  
+  .ipad-pro .div-wrapper-3 {
+    display: flex;
+    width: 180px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    align-self: stretch;
+  } */
+  
+  .ipad-pro .action {
+    display: flex;
+    width: 132px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 8px 17px;
+    position: relative;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid;
+    border-color: #0093ff;
+  }
+  
+  .ipad-pro .action-2 {
+    position: relative;
+    flex: 1;
+    align-self: stretch;
+    margin-top: -1px;
+    
+    font-weight: 600;
+    color: #0093ff;
+    font-size: 13px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 0;
+    -webkit-box-orient: vertical;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  .ipad-pro .overlap-group-2 {
+    position: relative;
+    height: 14px;
+  }
+  
+  .ipad-pro .ellipse {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    top: 0;
+    left: 0;
+    border-radius: 6px;
+    background-color: #d9d9d9;
+    border: 1px solid;
+    border-color: #000000;
+  }
+  
+  .ipad-pro .line-4 {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    top: 9px;
+    left: 9px;
+  }
+  
+  .ipad-pro .filler-text {
+    position: relative;
+    width: fit-content;
+    height: 100%;
+    flex-grow: 1;
+    
+    font-weight: 400;
+    color: #d0dcf5;
+    /* color: #a0a0a0; */
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+    background-color: transparent;
+    border: none;
+  }
+  
+  ::placeholder {
+    color: #fff !important; 
+    opacity: 0.65; /* Firefox */
+  }
+  
+  .search-cross-btn{
+    width: 25px;
+    height: 25px;
+    filter: brightness(1);
+    cursor: pointer;
+  }
+  
+  
+  
+  
+  
+  .ipad-pro .div-2 {
+    position: relative;
+    width: 12px;
+    height: 8px;
+  }
+  
+  .ipad-pro .line-5 {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    top: 0;
+    left: 0;
+  }
+  
+  .ipad-pro .line-6 {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    top: 0;
+    left: 4px;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  .hor-scrl-pages {
+    position:absolute;
+    top: 58px;
+    width: 780px;
+    height: 404px;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+  }
+  
+  /* chrome */
+  .hor-scrl-pages::-webkit-scrollbar{
+    display: none;
+  }
+  
+  /* firefox */
+  .hor-scrl-pages:root{ scrollbar-width: none }
+  
+  .hor-scrl-content{
+    width: calc(12*180px + 11 * 20px);
+    height: 100%;
+    display: flex;
+    align-items: stretch;
+    /* justify-content: space-between; */
+    gap: 20px;
+  }
+  
+  .hor-scrl-page{
+    width: 180px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 7px;
+    overflow: hidden;
+    transition: transform 0.3s ;
+    /* transition: transform 0.3s ease-in-out; */
+  }
+  
+  .hor-scrl-page:hover{
+    width: 180px;
+    /* background-color: blueviolet; */
+    /* cursor: pointer; */
+    transform: scale(0.95);
+  }
+  
+  .hor-scrl-page .img-container{  
+    width: 100%;
+    height: 250px;
+  }
+  
+  .hor-scrl-page .img-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    /* filter: grayscale(100); */
+  }
+  
+  .hor-scrl-page .footer {
+    width: 100%;
+    height: calc(404px - 250px);
+    padding: 15px;
+    background-color: #E2E2E2;
+  }
+  
+  .book-card-horizontal .genre-frame {
+    display: inline-flex;
+    flex-flow: column;
+    justify-content: center;
+    /* height: 20px; */
+    border-radius: 7px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    background-color: #A9D6E5;
+  }
+  
+  .book-card-horizontal .genre-text {
+    
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 12px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    
+  }
+  
+  
+  .hor-scrl-page .genre-frame {
+    display: inline-flex;
+    flex-flow: column;
+    justify-content: center;
+    height: 20px;
+    border-radius: 7px;
+    padding-left: 8px;
+    padding-right: 8px;
+    background-color: #A9D6E5;
+  }
+  
+  .hor-scrl-page .genre-text {
+    
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 12px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    
+  }
+  
+  .hor-scrl-page .description-frame {
+    width: 100%;
+    height: 75px;
+    padding-top: 0;
+    padding-bottom: 0px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    color: #a0a0a0;
+  }
+  
+  .hor-scrl-page .description-text {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    color: #a0a0a0;
+    
+    
+    font-weight: 400;
+    color: #a0a0a0;
+    font-size: 12px;
+    letter-spacing: 0;
+    line-height: 15px;
+    
+    /* chrome */
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  
+    
+    /* text-overflow: ellipsis; */
+    /* white-space: nowrap; */
+  }
+  
+  .hor-scrl-page .name-frame {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-end;
+    height: 20px;
+    width: 100%;
+  }
+  
+  .hor-scrl-page .name-text{
+    display: -webkit-box;
+    
+    font-weight: 400;
+    color: #000000;
+    font-size: 13px;
+    letter-spacing: 0;
+    line-height: normal;
+    text-decoration: none;
+    
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .hor-scrl-tabs{
+    display: flex;
+    height: 32px;
+    gap: 34px;
+    
+  }
+  
+  .hor-scrl-tabs .hor-scrl-tab{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+  }
+  
+  .hor-scrl-tabs .hor-scrl-tab:hover {
+    cursor: pointer;
+  }
+  
+  .hor-scrl-tabs .underline{
+    height: 3px;
+    background-color: #0075ff;
+  }
+  
+  /* ====================================================================================== */
+  
+  
+  
+  .ipad-pro .page-selector {
+    position: absolute;
+    width: 137px;
+    height: 24px;
+    top: 0;
+    left: 643px;
+  }
+  
+  /* ====================================================================================== */
+  
+  .hor-scrl-arrows{
+    position: absolute;
+    width: 137px;
+    height: 24px;
+    top: 0px;
+    left: 643px;
+    display: flex;
+    align-items: center;
+    gap:6px;
+  }
+  
+  #btn-0, #btn-1, #btn-2{
+    width: 23px;
+    height: 100%;
+    background-color: #a0a0a000;
+    cursor: pointer;
+  }
+  
+  #btn-0-bg, #btn-1-bg, #btn-2-bg{
+    position: absolute;
+    width: 23px;
+    height: 2px;
+    top: 11px;
+    background-color: #a0a0a08d;
+  }
+  
+  #btn-0-filler, #btn-1-filler, #btn-2-filler{
+    position: absolute;
+    width: 23px;
+    height: 4px;
+    top: 10px;
+    background-color: #708ecf;
+  }
+  
+  #hor-scrl-arrow-left,
+  #hor-scrl-arrow-right
+  {
+    width: 23px;
+    height: 100%;
+    object-fit:contain;
+    filter:invert(0);  
+    cursor: pointer;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+  }
+  .cart-close{
+    filter: invert(1);
+  }
+  .cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+  }
+  
+  .remove-btn {
+    color: red;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  .cart {
+  
+    display: none;
+    position: fixed;
+    z-index: 100;
+    top: 20px;
+    right: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cart.active {
+    display: block;
+  }
+  
+  
+  
+  .top-cart-icon{
+    width: 15px !important;
+    height: 15px !important; 
+  }
+  
+  #cart h2 {
+    margin-bottom: 10px;
+  }
+  
+  #cart-items {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #cart-items li {
+    margin-bottom: 5px;
+  }
+
+  .orders-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    font-size: 2rem;
+    border-width: 3px 3px 3px 0;
+  }
+
+  .orders-list-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    font-size: 1.5rem;
+    
+    border-style: solid;
+    border-width: 1px 1px 0 1px;
+    border-radius: 5px 5px 0 0;
+    padding: 10px 10px;
+    margin-top: 10px;
+    
+  }
+.order-book-line{
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px;
+  /* margin: 10; */
+  border-bottom: 5px solid #ccc;
+  background-color: #E2E2E2;
+}
+
+.order-header-status{
+  font-size: 1rem !important;
+}
+.received-order-button{
+  /* color: white; */
+
+  padding: 5px 10px;
+  border: 3px solid#E2E2E2;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+  

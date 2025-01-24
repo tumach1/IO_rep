@@ -1,0 +1,24 @@
+input[type="submit"] {
+    background-color: #005b96;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.ipad-pro .book-card-horizontal {
+    display: flex;
+    height: 100px;
+    align-items: center;
+    justify-content: stretch;
+    gap: 20px;
+    width: 100%;
+    flex-grow: 1;
+    max-width: 1180px;
+    /* overflow: hidden; */
+}
